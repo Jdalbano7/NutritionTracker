@@ -1,5 +1,5 @@
-﻿using NutritionTracker.Models;
-using NutritionTracker.Services;
+﻿using MvvmCross.Navigation;
+using MvvmCross.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,11 +8,15 @@ using Xamarin.Forms;
 
 namespace NutritionTracker.ViewModels
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    public class BaseViewModel : MvxViewModel
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        protected readonly IMvxNavigationService _navigationService;
 
-        bool isBusy = false;
+        public BaseViewModel(IMvxNavigationService navigationService)
+        {
+            _navigationService = navigationService;
+        }
+        /*bool isBusy = false;
         public bool IsBusy
         {
             get { return isBusy; }
@@ -49,6 +53,6 @@ namespace NutritionTracker.ViewModels
 
             changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        #endregion
+        #endregion*/
     }
 }

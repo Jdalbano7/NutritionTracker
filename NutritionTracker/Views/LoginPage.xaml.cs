@@ -1,4 +1,7 @@
-﻿using NutritionTracker.ViewModels;
+﻿using MvvmCross.Forms.Views;
+using MvvmCross.ViewModels;
+using MvvmCross.Views;
+using NutritionTracker.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,13 +12,28 @@ using Xamarin.Forms.Xaml;
 
 namespace NutritionTracker.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class LoginPage : MvxContentPage<LoginViewModel>
     {
         public LoginPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
+
         }
+
+        
+        protected override void OnAppearing()
+        {
+            Bind();
+            base.OnAppearing();
+
+        }
+
+        private void Bind()
+        {
+            var bindingSet = CreateBindingSet();
+            bindingSet.Bind(btnLogin).To(vm => vm.LoginCommand);
+            bindingSet.Apply();
+        }
+
     }
 }

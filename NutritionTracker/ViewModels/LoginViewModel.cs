@@ -1,4 +1,6 @@
-﻿using NutritionTracker.Views;
+﻿using MvvmCross.Commands;
+using MvvmCross.Navigation;
+using NutritionTracker.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,17 +10,16 @@ namespace NutritionTracker.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-        public Command LoginCommand { get; }
+        public IMvxCommand LoginCommand { get; }
 
-        public LoginViewModel()
+        public LoginViewModel(IMvxNavigationService navigationService): base(navigationService)
         {
-            LoginCommand = new Command(OnLoginClicked);
+            LoginCommand = new MvxCommand(Login);
         }
 
-        private async void OnLoginClicked(object obj)
+        private void Login()
         {
-            // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+            Application.Current.MainPage.DisplayAlert("logged in", "loged in", "Okay good");
         }
     }
 }

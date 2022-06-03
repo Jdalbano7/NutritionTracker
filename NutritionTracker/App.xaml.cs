@@ -1,4 +1,5 @@
-﻿using NutritionTracker.Services;
+﻿using MvvmCross.Forms.Views;
+using MvvmCross.ViewModels;
 using NutritionTracker.Views;
 using System;
 using Xamarin.Forms;
@@ -12,9 +13,7 @@ namespace NutritionTracker
         public App()
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
-            MainPage = new LoginPage();
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()
