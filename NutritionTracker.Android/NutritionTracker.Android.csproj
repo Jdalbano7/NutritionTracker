@@ -55,6 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="MvvmCross.Forms">
+      <Version>7.1.2</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2401" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
   </ItemGroup>
@@ -88,6 +91,10 @@
     <AndroidResource Include="Resources\drawable\icon_feed.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NutritionTracker.Core\NutritionTracker.Core.csproj">
+      <Project>{c01e2cd1-033a-4957-9e38-2526c0548b22}</Project>
+      <Name>NutritionTracker.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NutritionTracker\NutritionTracker.csproj">
       <Project>{97184A24-0D32-4A08-9750-D9F544C51E80}</Project>
       <Name>NutritionTracker</Name>

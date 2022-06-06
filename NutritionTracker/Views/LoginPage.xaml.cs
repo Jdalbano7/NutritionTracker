@@ -1,7 +1,7 @@
 ﻿using MvvmCross.Forms.Views;
 using MvvmCross.ViewModels;
 using MvvmCross.Views;
-using NutritionTracker.ViewModels;
+using NutritionTracker.Core.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,6 @@ namespace NutritionTracker.Views
         public LoginPage()
         {
             InitializeComponent();
-
         }
 
         
@@ -31,7 +30,8 @@ namespace NutritionTracker.Views
         private void Bind()
         {
             var bindingSet = CreateBindingSet();
-            bindingSet.Bind(btnLogin).To(vm => vm.LoginCommand);
+            bindingSet.Bind(btnLogin).For(btn => btn.Command).To(vm => vm.LoginCommand);
+            bindingSet.Bind(btnLogin).For(btn => btn.Text).To(vm => vm.LoginText);
             bindingSet.Apply();
         }
 

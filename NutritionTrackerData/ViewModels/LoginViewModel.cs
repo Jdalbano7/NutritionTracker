@@ -1,16 +1,15 @@
 ﻿using MvvmCross.Commands;
 using MvvmCross.Navigation;
-using NutritionTracker.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Xamarin.Forms;
 
-namespace NutritionTracker.ViewModels
+namespace NutritionTracker.Core.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
         public IMvxCommand LoginCommand { get; }
+        public string LoginText => "Login";
 
         public LoginViewModel(IMvxNavigationService navigationService): base(navigationService)
         {
@@ -19,7 +18,9 @@ namespace NutritionTracker.ViewModels
 
         private void Login()
         {
-            Application.Current.MainPage.DisplayAlert("logged in", "loged in", "Okay good");
+
+            System.Console.WriteLine("Logged in");
+
         }
     }
 }

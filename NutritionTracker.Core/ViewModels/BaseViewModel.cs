@@ -4,9 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using Xamarin.Forms;
 
-namespace NutritionTracker.ViewModels
+namespace NutritionTracker.Core.ViewModels
 {
     public class BaseViewModel : MvxViewModel
     {

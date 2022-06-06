@@ -6,13 +6,13 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:mvx ="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
-    xmlns:viewModels="clr-namespace:NutritionTracker.ViewModels"
+    xmlns:viewModels="clr-namespace:NutritionTracker.Core.ViewModels;assembly=NutritionTracker.Core"
     mc:Ignorable="d"
     x:Class="NutritionTracker.Views.LoginPage"
     Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Button x:Name="btnLogin" VerticalOptions="Center" Text="Login" />
+            <Button x:Name="btnLogin" VerticalOptions="Center"  />
         </StackLayout>
     </ContentPage.Content>
 </mvx:MvxContentPage>
