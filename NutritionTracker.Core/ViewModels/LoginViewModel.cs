@@ -26,14 +26,24 @@ namespace NutritionTracker.Core.ViewModels
         public string Username
         {
             get { return _username; }
-            set { SetProperty(ref _username, value); } 
+            set 
+            {
+
+                SetProperty(ref _username, value);
+                
+                LoginCommand.RaiseCanExecuteChanged();
+            } 
         }
 
         private string _password;
         public string Password
         {
             get { return _password; }
-            set { SetProperty(ref _password, value); }
+            set 
+            { 
+                SetProperty(ref _password, value);
+                LoginCommand.RaiseCanExecuteChanged();
+            }
         }
 
 

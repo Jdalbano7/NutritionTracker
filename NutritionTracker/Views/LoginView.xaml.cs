@@ -12,9 +12,9 @@ using Xamarin.Forms.Xaml;
 
 namespace NutritionTracker.Views
 {
-    public partial class LoginPage : MvxContentPage<LoginViewModel>
+    public partial class LoginView : MvxContentPage<LoginViewModel>
     {
-        public LoginPage()
+        public LoginView()
         {
             InitializeComponent();
         }
@@ -30,6 +30,8 @@ namespace NutritionTracker.Views
         private void Bind()
         {
             var bindingSet = CreateBindingSet();
+            bindingSet.Bind(txtUsername).For(txt => txt.Text).To(vm => vm.Username);
+            bindingSet.Bind(txtPassword).For(txt => txt.Text).To(vm => vm.Password);
             bindingSet.Bind(btnLogin).For(btn => btn.Command).To(vm => vm.LoginCommand);
             bindingSet.Bind(btnLogin).For(btn => btn.Text).To(vm => vm.LoginText);
             bindingSet.Apply();
