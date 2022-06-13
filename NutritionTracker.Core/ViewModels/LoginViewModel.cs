@@ -50,7 +50,7 @@ namespace NutritionTracker.Core.ViewModels
         private void Login()
         {
 
-            System.Console.WriteLine("Logged in");
+            _navigationService.Navigate<HomeViewModel>();
 
         }
 
