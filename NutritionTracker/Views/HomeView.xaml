@@ -9,7 +9,11 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem>
-            
+            <ToolbarItem.IconImageSource>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Glyph="&#xf654e;"/>
+            </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
     

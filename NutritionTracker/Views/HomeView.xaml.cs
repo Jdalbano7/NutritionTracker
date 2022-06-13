@@ -16,6 +16,17 @@ namespace NutritionTracker.Views
         {
             InitializeComponent();
         }
+        protected override void OnAppearing()
+        {
+            Bind();
+            base.OnAppearing();
 
+        }
+
+        private void Bind()
+        {
+            var bindingSet = CreateBindingSet();
+            bindingSet.Apply();
+        }
     }
 }
