@@ -26,6 +26,8 @@ namespace NutritionTracker.Views
         private void Bind()
         {
             var bindingSet = CreateBindingSet();
+            bindingSet.Bind(btnSettings).For(x => x.Command).To(x => x.GoToSettingsCommand);
+            bindingSet.Bind(lblTitle).For(x => x.Text).To(x => x.TitleText);
             bindingSet.Apply();
         }
     }

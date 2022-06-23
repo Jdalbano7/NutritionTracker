@@ -5,23 +5,50 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         xmlns:mvx ="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
         xmlns:viewModels="clr-namespace:NutritionTracker.Core.ViewModels;assembly=NutritionTracker.Core"
+        xmlns:fontAwesomeIcons="clr-namespace:FontAwesome"
+        NavigationPage.HasBackButton="False"
         x:Class="NutritionTracker.Views.HomeView">
 
+    <NavigationPage.TitleView>
+        <Label x:Name="lblTitle" HorizontalTextAlignment="Center" />
+    </NavigationPage.TitleView>
+    
     <ContentPage.ToolbarItems>
-        <ToolbarItem>
+        <ToolbarItem x:Name="btnSettings">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
                     FontFamily="{StaticResource FontAwesomeSolid}"
-                    Glyph="&#xf654e;"/>
+                    Glyph="{x:Static fontAwesomeIcons:FontAwesomeIcons.Gear}"/>
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Grid MinimumHeightRequest="50">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+                    HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   
+                    FontSize="24" Text="2000 Cal"/>
+                <Label Grid.Row="1" Grid.Column="0" 
+                    HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   
+                    FontSize="12" Text="90 fats"/>
+                <Label Grid.Row="1" Grid.Column="1" 
+                    HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   
+                    FontSize="12" Text="2 cabrs"/>
+                <Label Grid.Row="1" Grid.Column="2" 
+                    HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   
+                    FontSize="12" Text="100 Protein"/>
+                
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </mvx:MvxContentPage>

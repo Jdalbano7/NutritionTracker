@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvx:MvxContentPage
+    x:TypeArguments="viewModels:SettingsViewModel"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mvx ="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:NutritionTracker.Core.ViewModels;assembly=NutritionTracker.Core"
+    xmlns:fontAwesomeIcons="clr-namespace:FontAwesome"
+    x:Class="NutritionTracker.Views.SettingsView">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+    
+</mvx:MvxContentPage>

@@ -67,9 +67,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Font Awesome 6 Brands-Regular-400.otf" />
-    <AndroidAsset Include="Assets\Font Awesome 6 Free-Regular-400.otf" />
-    <AndroidAsset Include="Assets\Font Awesome 6 Free-Solid-900.otf" />
+    <AndroidAsset Include="Assets\FontAwesome6Brands400.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\FontAwesome6Regular400.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\FontAwesome6Solid900.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
