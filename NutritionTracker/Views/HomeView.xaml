@@ -42,31 +42,31 @@
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Grid.Row="0" Grid.Column="1"
+                    <Label x:Name="lblCalorieAmt" Grid.Row="0" Grid.Column="1"
                         HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   
-                        FontSize="48" Text="2000"/>
-                    <Label Grid.Row="0" Grid.Column="2" 
+                        FontSize="48"/>
+                    <Label x:Name="lblCalorie" Grid.Row="0" Grid.Column="2" 
                         HorizontalTextAlignment="Start" VerticalTextAlignment="Center"   
-                        FontSize="36" Text="cal"/>
+                        FontSize="36"/>
                 </Grid>
-                <Label Grid.Row="1" Grid.Column="0"
+                <Label x:Name="lblFatAmt" Grid.Row="1" Grid.Column="0"
                     HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   
-                    FontSize="24" Text="90"/>  
-                <Label Grid.Row="2" Grid.Column="0"
+                    FontSize="24"/>  
+                <Label x:Name="lblFat" Grid.Row="2" Grid.Column="0"
                     HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   
-                    FontSize="12" Text="fats"/>
-                <Label Grid.Row="1" Grid.Column="1" 
+                    FontSize="12"/>
+                <Label x:Name="lblCarbAmt" Grid.Row="1" Grid.Column="1" 
                     HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   
-                    FontSize="24" Text="2"/>
-                <Label Grid.Row="2" Grid.Column="1" 
+                    FontSize="24"/>
+                <Label x:Name="lblCarb" Grid.Row="2" Grid.Column="1" 
                     HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   
-                    FontSize="12" Text="carbs"/>
-                <Label Grid.Row="1" Grid.Column="2" 
+                    FontSize="12"/>
+                <Label x:Name="lblProteinAmt" Grid.Row="1" Grid.Column="2" 
                     HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   
-                    FontSize="24" Text="100"/>
-                  <Label Grid.Row="2" Grid.Column="2" 
+                    FontSize="24"/>
+                  <Label x:Name="lblProtein" Grid.Row="2" Grid.Column="2" 
                     HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   
-                    FontSize="12" Text="Protein"/>
+                    FontSize="12"/>
                 
             </Grid>
         </StackLayout>

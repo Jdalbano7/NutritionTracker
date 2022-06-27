@@ -28,6 +28,16 @@ namespace NutritionTracker.Views
             var bindingSet = CreateBindingSet();
             bindingSet.Bind(btnSettings).For(x => x.Command).To(x => x.GoToSettingsCommand);
             bindingSet.Bind(lblTitle).For(x => x.Text).To(x => x.TitleText);
+            bindingSet.Bind(lblCalorieAmt).For(x => x.Text).To(x => x.CaloriesAmount);
+            bindingSet.Bind(lblCalorie).For(x => x.Text).To(x => x.CaloriesLabel);
+            bindingSet.Bind(lblFatAmt).For(x => x.Text).To(x => x.FatAmount);
+            bindingSet.Bind(lblFat).For(x => x.Text).To(x => x.FatLabel);
+            bindingSet.Bind(lblCarbAmt).For(x => x.Text).To(x => x.CarbAmount);
+            bindingSet.Bind(lblCarb).For(x => x.Text).To(x => x.CarbLabel);
+            bindingSet.Bind(lblProteinAmt).For(x => x.Text).To(x => x.ProteinAmount);
+            bindingSet.Bind(lblProtein).For(x => x.Text).To(x => x.ProteinLabel);
+
+
             bindingSet.Apply();
         }
     }

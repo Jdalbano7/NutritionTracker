@@ -16,6 +16,14 @@ namespace NutritionTracker.Core.ViewModels
         public IMvxCommand GoToSettingsCommand { get; set; }
 
         public string TitleText => "Nutrition Tracker";
+        public int CaloriesAmount => 2000;
+        public string CaloriesLabel => "cal";
+        public int FatAmount => 120;
+        public string FatLabel => "Fats";
+        public int CarbAmount => 80;
+        public string CarbLabel => "Carbs";
+        public int ProteinAmount => 900;
+        public string ProteinLabel => "Protein";
 
         private void GoToSettings()
         {
