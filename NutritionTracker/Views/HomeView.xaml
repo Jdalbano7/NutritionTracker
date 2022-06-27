@@ -25,8 +25,9 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <Grid MinimumHeightRequest="50">
+            <Grid>
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
@@ -35,18 +36,37 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+                <Grid Grid.ColumnSpan="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="1"
+                        HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   
+                        FontSize="48" Text="2000"/>
+                    <Label Grid.Row="0" Grid.Column="2" 
+                        HorizontalTextAlignment="Start" VerticalTextAlignment="Center"   
+                        FontSize="36" Text="cal"/>
+                </Grid>
+                <Label Grid.Row="1" Grid.Column="0"
                     HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   
-                    FontSize="24" Text="2000 Cal"/>
-                <Label Grid.Row="1" Grid.Column="0" 
+                    FontSize="24" Text="90"/>  
+                <Label Grid.Row="2" Grid.Column="0"
                     HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   
-                    FontSize="12" Text="90 fats"/>
+                    FontSize="12" Text="fats"/>
                 <Label Grid.Row="1" Grid.Column="1" 
                     HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   
-                    FontSize="12" Text="2 cabrs"/>
+                    FontSize="24" Text="2"/>
+                <Label Grid.Row="2" Grid.Column="1" 
+                    HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   
+                    FontSize="12" Text="carbs"/>
                 <Label Grid.Row="1" Grid.Column="2" 
                     HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   
-                    FontSize="12" Text="100 Protein"/>
+                    FontSize="24" Text="100"/>
+                  <Label Grid.Row="2" Grid.Column="2" 
+                    HorizontalTextAlignment="Center" VerticalTextAlignment="Center"   
+                    FontSize="12" Text="Protein"/>
                 
             </Grid>
         </StackLayout>
