@@ -1,7 +1,10 @@
 ﻿using MvvmCross.Commands;
 using MvvmCross.Navigation;
+using NutritionTracker.Data.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 
 namespace NutritionTracker.Core.ViewModels
@@ -16,14 +19,32 @@ namespace NutritionTracker.Core.ViewModels
         public IMvxCommand GoToSettingsCommand { get; set; }
 
         public string TitleText => "Nutrition Tracker";
-        public int CaloriesAmount => 2000;
+        public int CaloriesAmount => IntakeEntries.Sum(x => x.Calories);
         public string CaloriesLabel => "cal";
-        public int FatAmount => 120;
+        public int FatAmount => IntakeEntries.Sum(x => x.Fat);
         public string FatLabel => "Fats";
-        public int CarbAmount => 80;
+        public int CarbAmount => IntakeEntries.Sum(x => x.Carbs);
         public string CarbLabel => "Carbs";
-        public int ProteinAmount => 900;
+        public int ProteinAmount => IntakeEntries.Sum(x => x.Protein);
         public string ProteinLabel => "Protein";
+
+        private List<IntakeEntry> IntakeEntries => new List<IntakeEntry>
+        {
+            new IntakeEntry
+            {
+                Calories = 1000,
+                Fat = 518,
+                Protein = 20,
+                Carbs = 59,
+            },
+            new IntakeEntry
+            {
+                Calories = 223,
+                Fat = 23,
+                Protein = 240,
+                Carbs = 5229,
+            },
+        };
 
         private void GoToSettings()
         {

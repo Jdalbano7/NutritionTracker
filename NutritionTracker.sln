@@ -11,7 +11,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NutritionTracker", "Nutriti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NutritionTracker.Api", "NutritionTrackerApi\NutritionTracker.Api.csproj", "{220A7090-2BB3-4FC4-A5C4-47DA31636EAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutritionTracker.Core", "NutritionTracker.Core\NutritionTracker.Core.csproj", "{C01E2CD1-033A-4957-9E38-2526C0548B22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NutritionTracker.Core", "NutritionTracker.Core\NutritionTracker.Core.csproj", "{C01E2CD1-033A-4957-9E38-2526C0548B22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobile", "Mobile", "{DC065D09-8EA8-4D9E-A091-1D16E49DFBA4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{59FBC1E1-F9D4-4A46-AA15-392CC5891078}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{9FF31760-2313-4B5A-B97E-DDC03EA44390}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutritionTracker.Data", "NutritionTracker.Data\NutritionTracker.Data.csproj", "{88C38977-AF4F-472B-99ED-B5CAE91CFFAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,9 +109,29 @@ Global
 		{C01E2CD1-033A-4957-9E38-2526C0548B22}.Release|iPhone.Build.0 = Release|Any CPU
 		{C01E2CD1-033A-4957-9E38-2526C0548B22}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{C01E2CD1-033A-4957-9E38-2526C0548B22}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{88C38977-AF4F-472B-99ED-B5CAE91CFFAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88C38977-AF4F-472B-99ED-B5CAE91CFFAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88C38977-AF4F-472B-99ED-B5CAE91CFFAA}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{88C38977-AF4F-472B-99ED-B5CAE91CFFAA}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{88C38977-AF4F-472B-99ED-B5CAE91CFFAA}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{88C38977-AF4F-472B-99ED-B5CAE91CFFAA}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{88C38977-AF4F-472B-99ED-B5CAE91CFFAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88C38977-AF4F-472B-99ED-B5CAE91CFFAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88C38977-AF4F-472B-99ED-B5CAE91CFFAA}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{88C38977-AF4F-472B-99ED-B5CAE91CFFAA}.Release|iPhone.Build.0 = Release|Any CPU
+		{88C38977-AF4F-472B-99ED-B5CAE91CFFAA}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{88C38977-AF4F-472B-99ED-B5CAE91CFFAA}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{22E9E538-22CB-4102-902E-5FA81C6A342D} = {DC065D09-8EA8-4D9E-A091-1D16E49DFBA4}
+		{2F9F0202-ADE5-40FD-B075-AC6EF31E006E} = {DC065D09-8EA8-4D9E-A091-1D16E49DFBA4}
+		{355B68B3-EA01-4BD2-82EC-70EB836B0A6D} = {DC065D09-8EA8-4D9E-A091-1D16E49DFBA4}
+		{220A7090-2BB3-4FC4-A5C4-47DA31636EAC} = {9FF31760-2313-4B5A-B97E-DDC03EA44390}
+		{C01E2CD1-033A-4957-9E38-2526C0548B22} = {DC065D09-8EA8-4D9E-A091-1D16E49DFBA4}
+		{88C38977-AF4F-472B-99ED-B5CAE91CFFAA} = {59FBC1E1-F9D4-4A46-AA15-392CC5891078}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BDF58EE2-4779-4024-9A9C-9CF352D90DB4}
