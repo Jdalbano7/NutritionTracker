@@ -1,11 +1,12 @@
-﻿using NutritionTracker.Data.Models;
+﻿using NutritionTracker.Core.Services.Interface;
+using NutritionTracker.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace NutritionTracker.Core.Services.Implementation.Mock
 {
-    internal class MockIntakeEntryService
+    internal class MockIntakeEntryService : IIntakeEntryService
     {
         public List<IntakeEntry> GetIntakeEntries()
         {
@@ -14,17 +15,17 @@ namespace NutritionTracker.Core.Services.Implementation.Mock
             {
                 new IntakeEntry
                 {
-                    Calories = 1000,
-                    Fat = 518,
-                    Protein = 20,
-                    Carbs = 59,
+                    Calories = 17,
+                    Fat = 17,
+                    Protein = 17,
+                    Carbs = 17,
                 },
                 new IntakeEntry
                 {
-                    Calories = 223,
-                    Fat = 23,
-                    Protein = 240,
-                    Carbs = 5229,
+                    Calories = 7,
+                    Fat = 7,
+                    Protein = 7,
+                    Carbs = 7,
                 },
             };
         }

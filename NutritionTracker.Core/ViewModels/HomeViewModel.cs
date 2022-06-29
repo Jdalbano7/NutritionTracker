@@ -1,18 +1,26 @@
 ﻿using MvvmCross.Commands;
 using MvvmCross.Navigation;
+using NutritionTracker.Core.Services.Interface;
 using NutritionTracker.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace NutritionTracker.Core.ViewModels
 {
     public class HomeViewModel : BaseViewModel
     {
-        public HomeViewModel(IMvxNavigationService navigationService) : base(navigationService)
+        private readonly IIntakeEntryService _intakeEntryService;
+
+        public HomeViewModel(
+            IMvxNavigationService navigationService,
+            IIntakeEntryService intakeEntryService) : base(navigationService)
         {
+            _intakeEntryService = intakeEntryService; 
+
             GoToSettingsCommand = new MvxCommand(GoToSettings);
         }
 
@@ -28,23 +36,31 @@ namespace NutritionTracker.Core.ViewModels
         public int ProteinAmount => IntakeEntries.Sum(x => x.Protein);
         public string ProteinLabel => "Protein";
 
-        private List<IntakeEntry> IntakeEntries => new List<IntakeEntry>
+        private List<IntakeEntry> _intakeEntries;
+        private List<IntakeEntry> IntakeEntries
         {
-            new IntakeEntry
+            get => _intakeEntries ?? new List<IntakeEntry>();
+            set
             {
-                Calories = 1000,
-                Fat = 518,
-                Protein = 20,
-                Carbs = 59,
-            },
-            new IntakeEntry
-            {
-                Calories = 223,
-                Fat = 23,
-                Protein = 240,
-                Carbs = 5229,
-            },
-        };
+                _intakeEntries = value;
+                RaisePropertyChanged(nameof(CaloriesAmount));
+                RaisePropertyChanged(nameof(FatAmount));
+                RaisePropertyChanged(nameof(CarbAmount));
+                RaisePropertyChanged(nameof(ProteinAmount));
+            }
+        }
+
+        public override Task Initialize()
+        {
+            return base.Initialize();
+        }
+
+        public override void ViewAppearing()
+        {
+            base.ViewAppearing();
+
+            IntakeEntries = _intakeEntryService.GetIntakeEntries();
+        }
 
         private void GoToSettings()
         {

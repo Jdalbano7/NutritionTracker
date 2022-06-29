@@ -1,10 +1,12 @@
-﻿using System;
+﻿using NutritionTracker.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace NutritionTracker.Core.Services.Interface
 {
-    internal interface IIntakeEntryService
+    public interface IIntakeEntryService
     {
+        List<IntakeEntry> GetIntakeEntries();
     }
 }
