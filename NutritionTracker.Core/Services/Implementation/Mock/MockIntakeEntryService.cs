@@ -1,4 +1,5 @@
 ﻿using NutritionTracker.Core.Services.Interface;
+using NutritionTracker.Data.Enums;
 using NutritionTracker.Data.Models;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace NutritionTracker.Core.Services.Implementation.Mock
                     Fat = 17,
                     Protein = 17,
                     Carbs = 17,
+                    Meal = Meal.Breakfast
                 },
                 new IntakeEntry
                 {
@@ -26,6 +28,7 @@ namespace NutritionTracker.Core.Services.Implementation.Mock
                     Fat = 7,
                     Protein = 7,
                     Carbs = 7,
+                    Meal = Meal.Snack
                 },
             };
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NutritionTracker.Data.Enums;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -10,5 +11,7 @@ namespace NutritionTracker.Data.Models
         public int Fat { get; set; }
         public int Carbs { get; set; }
         public int Protein { get; set; }
+        public Meal Meal { get; set; }
+
     }
 }
